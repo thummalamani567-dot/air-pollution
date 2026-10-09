@@ -16,7 +16,6 @@ import {
   ShieldCheck,
   ArrowRight,
   Leaf,
-  Check,
 } from 'lucide-react';
 
 interface PreventionMethodsPageProps {

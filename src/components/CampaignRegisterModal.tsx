@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Calendar, MapPin, Clock, CheckCircle2, Ticket, Sparkles } from 'lucide-react';
+import { X, Calendar, MapPin, CheckCircle2, Ticket, Sparkles } from 'lucide-react';
 
 interface CampaignRegisterModalProps {
   isOpen: boolean;

@@ -15,8 +15,6 @@ import {
   ShieldCheck,
   Megaphone,
   Users2,
-  ChevronRight,
-  Info,
 } from 'lucide-react';
 
 interface CausesAndEffectsPageProps {

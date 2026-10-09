@@ -4,11 +4,8 @@ import {
   RefreshCw,
   Sun,
   CloudSun,
-  CloudRain,
   Wind,
   Droplets,
-  AlertTriangle,
-  CheckCircle2,
   ChevronDown,
   Info,
 } from 'lucide-react';

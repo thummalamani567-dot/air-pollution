@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, CheckCircle, ArrowRight, ShieldCheck, TrendingUp, Sparkles } from 'lucide-react';
+import { X, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 import { FEATURE_DETAILS } from '../data/airData';
 
 interface DetailModalProps {

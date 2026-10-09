@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Check, Award, Sparkles, Download, Share2, HeartHandshake } from 'lucide-react';
+import { X, Check, Award, Sparkles, Share2, HeartHandshake } from 'lucide-react';
 
 interface PledgeModalProps {
   isOpen: boolean;

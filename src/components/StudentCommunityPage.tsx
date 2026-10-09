@@ -18,7 +18,6 @@ import {
   ArrowRight,
   Sprout,
   X,
-  CheckCircle2,
 } from 'lucide-react';
 import { CreatePostModal } from './CreatePostModal';
 
@@ -385,9 +384,49 @@ export const StudentCommunityPage: React.FC<StudentCommunityPageProps> = ({
               </button>
             </div>
 
+            {/* Filter Tabs */}
+            <div className="flex items-center gap-2 pb-1">
+              <button
+                onClick={() => setActiveTab('all')}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                  activeTab === 'all'
+                    ? 'bg-[#00e599] text-[#030d0a] shadow-sm'
+                    : 'bg-[#061510] border border-[#112d22] text-[#7e9a8f] hover:text-white'
+                }`}
+              >
+                {language === 'en' ? 'All Updates' : 'అన్ని పోస్టులు'}
+              </button>
+              <button
+                onClick={() => setActiveTab('ideas')}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                  activeTab === 'ideas'
+                    ? 'bg-[#00e599] text-[#030d0a] shadow-sm'
+                    : 'bg-[#061510] border border-[#112d22] text-[#7e9a8f] hover:text-white'
+                }`}
+              >
+                {language === 'en' ? 'Initiatives' : 'హరిత చొరవలు'}
+              </button>
+              <button
+                onClick={() => setActiveTab('challenges')}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                  activeTab === 'challenges'
+                    ? 'bg-[#00e599] text-[#030d0a] shadow-sm'
+                    : 'bg-[#061510] border border-[#112d22] text-[#7e9a8f] hover:text-white'
+                }`}
+              >
+                {language === 'en' ? 'Challenges & Badges' : 'సవాళ్లు & బ్యాడ్జీలు'}
+              </button>
+            </div>
+
             {/* Feed Posts Container */}
             <div className="space-y-4">
-              {posts.map((post) => (
+              {posts
+                .filter((p) => {
+                  if (activeTab === 'ideas') return !p.isBadgeCard;
+                  if (activeTab === 'challenges') return p.isBadgeCard || p.tags.includes('#GreenChallenge');
+                  return true;
+                })
+                .map((post) => (
                 <article
                   key={post.id}
                   className="bg-[#061510] border border-[#112d22] rounded-2xl p-5 hover:border-emerald-500/30 transition-colors"

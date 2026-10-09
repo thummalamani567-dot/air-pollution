@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Send, Sparkles, Image as ImageIcon } from 'lucide-react';
+import { X, Send, Sparkles } from 'lucide-react';
 
 interface CreatePostModalProps {
   isOpen: boolean;
