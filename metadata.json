@@ -1,0 +1,6 @@
+{
+  "name": "AirCare - Clean Air Initiative",
+  "description": "Empowering communities and students to understand air quality, monitor live AQI, and take impactful climate action for a greener future.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
